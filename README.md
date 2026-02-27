@@ -7,6 +7,15 @@ This project implements a hybrid Quantum–Graph Neural Network (QGNN) model to 
 - 801 patient samples (nodes)
 - 20,531 gene expression features
 - Multi-class cancer subtype labels
+- 
+- ## Dataset Source
+
+The dataset used in this project is publicly available:
+
+UCI Machine Learning Repository:
+https://archive.ics.uci.edu/dataset/401/gene+expression+cancer+rna+seq
+
+The dataset is not included in this repository due to size considerations.
 
 ## Project Workflow
 

@@ -4,10 +4,10 @@ Hybrid Quantum–Graph Neural Network (QGNN) for cancer subtype classification u
 This project implements a hybrid Quantum–Graph Neural Network (QGNN) model to classify cancer subtypes using the TCGA-PANCAN RNA-Seq dataset.
 
 ## Dataset
-- 801 patient samples (nodes)
+- 801 patient samples
 - 20,531 gene expression features
-- Multi-class cancer subtype labels
-- 
+- PCA → 200 dimensions
+- Graph construction using cosine similarity + kNN
 - ## Dataset Source
 
 The dataset used in this project is publicly available:
@@ -39,17 +39,20 @@ The dataset is not included in this repository due to size considerations.
    - GPU-based training using Google Colab
 
 ## Results
-- Achieved ~98% test accuracy
-- Evaluated using:
-  - Confusion Matrix
-  - Classification Report
-  - t-SNE visualization of learned embeddings
+| Model | Accuracy |
+|------|---------|
+| Random Forest | 85% |
+| Gradient Boosting | 86% |
+| DNN | 90% |
+| QGNN-CSD | 98% |
 
 ## Technologies Used
 - Python
 - PyTorch
+- PyTorch Geometric
+- PennyLane
+- NetworkX
 - Scikit-learn
-- Google Colab (GPU)
 
 ## Applications
 - Cancer subtype discovery
